@@ -1,0 +1,20 @@
+title New note in spa
+
+note over browser:
+User write something in textbox of the form and click save button
+end note
+
+note over browser:
+browser executes the event handler
+that handle form submit
+end note
+
+note over browser:
+browser push new note data to note elements using DOM-API
+end note
+
+browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa with body data of {content: "single ...", date: "2019-05-25T15:15:59.905Z"}
+note over server:
+server push new note data to the existing notes
+end note
+server-->browser: HTTP status code 201
